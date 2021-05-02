@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const fetch = require('node-fetch');
 const { uri, options } = require('./data/config/db.config');
 const errorHandlerMiddleware = require('./api/middlewares/error-handler.middleware');
 const routes = require('./api/routes/index');
@@ -18,7 +19,7 @@ mongoose
     // eslint-disable-next-line no-console
     console.log('DB connected');
   })
-  .catch((err) => {
+  .catch(err => {
     // eslint-disable-next-line no-console
     console.error('Unable to connect to the database:', err);
   });
