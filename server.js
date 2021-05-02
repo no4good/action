@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const fetch = require('node-fetch');
 const { uri, options } = require('./data/config/db.config');
 const errorHandlerMiddleware = require('./api/middlewares/error-handler.middleware');
 const routes = require('./api/routes/index');
